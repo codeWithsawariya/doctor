@@ -1,0 +1,62 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class=" border-right" id="sidebar-wrapper" style="background-color: #008CBA;" >
+    <div class="sidebar-heading text-center text-white py-4" style="background-color: #008CBA;">
+      <h5>Arbindo Hospital</h5>
+    </div>
+    <div class="list-group list-group-flush" >
+      <a routerLink="/dashboard" routerLinkActive="active" class="list-group-item list-group-item-action bg-dark text-white" >
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a routerLink="/dashboard/patients" routerLinkActive="active" class="list-group-item list-group-item-action bg-dark text-white">
+        <mat-icon>people</mat-icon> Patients
+      </a>
+      <a routerLink="/dashboard/appointments" routerLinkActive="active" class="list-group-item list-group-item-action bg-dark text-white">
+        <mat-icon>schedule</mat-icon> Appointments
+      </a>
+      
+      <!-- Dropdown for Doctors -->
+      <button mat-button [matMenuTriggerFor]="doctorMenu" class="list-group-item list-group-item-action bg-dark text-white">
+        <mat-icon>local_hospital</mat-icon> Doctors
+      </button>
+      <mat-menu #doctorMenu="matMenu">
+        <button mat-menu-item routerLink="/dashboard/doctors/addDoctor">Add Doctor</button>
+        <button mat-menu-item routerLink="/dashboard/doctors/getAllDoctor">Get All Doctors</button>
+      </mat-menu>
+
+      <!-- Dropdown for Medical Staff -->
+      <button mat-button [matMenuTriggerFor]="medicalStaffMenu" class="list-group-item list-group-item-action bg-dark text-white" style="background-color: #008CBA;">
+        <mat-icon>people_outline</mat-icon> Medical Staff
+      </button>
+      <mat-menu #medicalStaffMenu="matMenu">
+        <button mat-menu-item routerLink="/dashboard/medical-staff/nurse">Nurses</button>
+        <button mat-menu-item routerLink="/dashboard/medical-staff/technician">Technicians</button>
+      </mat-menu>
+
+      <a routerLink="/dashboard/reports" routerLinkActive="active" class="list-group-item list-group-item-action bg-dark text-white">
+        <mat-icon>assessment</mat-icon> Reports
+      </a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="flex-grow-1">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container-fluid">
+        <span class="navbar-text me-3">
+          Welcome, {{ username }}
+        </span>
+        <button class="btn btn-danger" id="logout-button" (click)="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col">
+          <router-outlet></router-outlet> <!-- This will render child components -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

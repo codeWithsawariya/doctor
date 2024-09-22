@@ -1,0 +1,102 @@
+body {
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  width: 250px; /* Fixed width for the sidebar */
+}
+
+.sidebar-heading {
+  padding: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: #343a40; /* Sidebar background */
+}
+
+.list-group-item {
+  border: none;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item:hover {
+  background-color: #495057; /* Darker background on hover */
+}
+
+#logout-button {
+  margin-left: auto;
+}
+
+.mat-icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Dropdown Styles */
+.mat-menu-item {
+  color: white; /* Text color for menu items */
+  padding: 12px 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.mat-menu-item:hover {
+  background-color: #6c757d; /* Highlight on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Dropdown Menu Background */
+.mat-menu-panel {
+  background-color: #495057; /* Dark background for dropdown */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Transition Effect for Dropdown */
+.mat-menu-trigger {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mat-menu-trigger:hover {
+  background-color: #6c757d; /* Change background color on hover */
+}
+
+/* Additional Styling for Active State */
+.mat-menu-item.active {
+  background-color: #007bff; /* Active item color */
+}
+
+/* Dark Mode Adjustments */
+.dark-mode {
+  background-color: #343a40;
+  color: white;
+}
+
+.dark-mode .bg-dark {
+  background-color: #495057 !important;
+}
+
+.dark-mode .bg-light {
+  background-color: #6c757d !important;
+}
+#sidebar-wrapper {
+  position: sticky;
+  top: 0; /* Keeps the sidebar at the top */
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+#page-content-wrapper {
+  position: relative;
+}
+
+.navbar {
+  position: sticky;
+  top: 0; /* Keeps the navbar at the top */
+  z-index: 1000; /* Ensure it stays above other content */
+}

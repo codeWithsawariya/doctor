@@ -1,0 +1,19 @@
+.card {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Space between cards */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }

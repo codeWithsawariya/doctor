@@ -1,0 +1,11 @@
+<p>view-profile works!</p>
+<div *ngIf="doctor">
+    <h2>Dr. {{ doctor.fullName }}'s Profile</h2>
+    <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+    <p><strong>Email:</strong> {{ doctor.email }}</p>
+    <p><strong>Contact:</strong> {{ doctor.contactInformation }}</p>
+  </div>
+  <div *ngIf="!doctor">
+    <p>Loading...</p>
+  </div>
+  

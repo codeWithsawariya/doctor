@@ -1,0 +1,107 @@
+<div class="container mt-5">
+    <h2>Add Doctor</h2>
+    <form [formGroup]="addDoctorForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput formControlName="fullName" required />
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" required />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <mat-form-field class="full-width">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput formControlName="dateOfBirth" type="date" required />
+            </mat-form-field>
+        </div>
+
+        <mat-form-field class="full-width">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender" required>
+                <mat-option value="">Select...</mat-option>
+                <mat-option value="Male">Male</mat-option>
+                <mat-option value="Female">Female</mat-option>
+                <mat-option value="Other">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div formGroupName="authentication">
+            <mat-form-field class="full-width">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username" required />
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" required type="password" />
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Country</mat-label>
+                    <input matInput formControlName="country" required />
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>City</mat-label>
+                    <input matInput formControlName="city" required />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="address" required />
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Documentation</mat-label>
+            <input matInput formControlName="documentation" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Pincode</mat-label>
+            <input matInput formControlName="pincode" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Contact Information</mat-label>
+            <input matInput formControlName="contactInformation" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Specialization</mat-label>
+            <input matInput formControlName="specialization" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Work Schedule</mat-label>
+            <input matInput formControlName="workSchedule" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Profile Status</mat-label>
+            <input matInput formControlName="profileStatus" required />
+        </mat-form-field>
+
+        <div class="form-group">
+            <button mat-raised-button color="primary" type="submit">Add Doctor</button>
+        </div>
+    </form>
+</div>
